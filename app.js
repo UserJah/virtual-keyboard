@@ -1,6 +1,6 @@
-import keyCodes from "./modules/keyCodes.js";
-import Key from "./modules/key.js";
-// import Key from "./modules/Key.js";
+import keyCodes from './modules/keyCodes.js';
+import Keyboard from './modules/Keyboard.js';
+
 const head = document.getElementsByTagName('HEAD')[0];
 const csslink = document.createElement('link');
 csslink.rel = 'stylesheet';
@@ -8,57 +8,57 @@ csslink.type = 'text/css';
 csslink.href = './app.css';
 head.appendChild(csslink);
 
-class Keyboard {
-  constructor() {
-    this.wrapper = document.createElement('div');
-    this.textareaDiv = document.createElement('div');
-    this.textarea = document.createElement('textarea');
-    this.keyboard = document.createElement('div');
-    this.wrapper.classList.add('wrapper');
-    this.textareaDiv.classList.add('textarea');
-    this.keyboard.classList.add('keyboard');
-    this.wrapper.appendChild(this.textareaDiv);
-    this.wrapper.appendChild(this.keyboard);
-    this.textareaDiv.appendChild(this.textarea);
-    document.body.appendChild(this.wrapper);
-    for (let i = 0; i < 5; i += 1) {
-      this.row = document.createElement('div');
-      this.row.classList.add('row');
-      this.keyboard.appendChild(this.row);
-    }
-    this.rows = document.querySelectorAll('.row');
-  }
-
-  createKeys(db) {
-    Object.values(db).forEach(obj => {
-      for (let i = 0; i < Object.values(obj).slice(0, 14).length; i += 1) {
-        const key = new Key();
-        key.node.innerHTML = `${Object.values(obj)[i].en[0]}`;
-        this.rows[0].appendChild(key.node);
-      }
-      for (let i = 14; i < Object.values(obj).slice(0, 29).length; i += 1) {
-        const key = new Key();
-        key.node.innerHTML = `${Object.values(obj)[i].en[0]}`;
-        this.rows[1].appendChild(key.node);
-      }
-      for (let i = 29; i < Object.values(obj).slice(0, 42).length; i += 1) {
-        const key = new Key();
-        key.node.innerHTML = `${Object.values(obj)[i].en[0]}`;
-        this.rows[2].appendChild(key.node);
-      }
-      for (let i = 42; i < Object.values(obj).slice(0, 55).length; i += 1) {
-        const key = new Key();
-        key.node.innerHTML = `${Object.values(obj)[i].en[0]}`;
-        this.rows[3].appendChild(key.node);
-      }
-      for (let i = 55; i < Object.values(obj).length; i += 1) {
-        const key = new Key();
-        key.node.innerHTML = `${Object.values(obj)[i].en[0]}`;
-        this.rows[4].appendChild(key.node);
-      }
-    });
-  }
-}
-
 const keyboard = new Keyboard();
 keyboard.createKeys(keyCodes);
+
+const keys = document.querySelectorAll('.key');
+keys.forEach((key, index) => {
+  key.setAttribute('id', `${Object.keys(keyCodes.keyCodes)[index]}`);
+});
+
+keyboard.keyboard.addEventListener('mousedown', e => {
+  let target = e.target;
+  if (target.classList.contains('key')) {
+    target.classList.add('active');
+  }
+});
+
+keyboard.keyboard.addEventListener('mouseup', e => {
+  let target = e.target;
+  if (target.classList.contains('key')) {
+    target.classList.remove('active');
+  }
+});
+
+document.addEventListener('keydown', e => {
+  if (document.getElementById(e.code)) {
+    document.getElementById(e.code).classList.add('active');
+  }
+});
+
+document.addEventListener('keyup', e => {
+  if (document.getElementById(e.code)) {
+    document.getElementById(e.code).classList.remove('active');
+  }
+});
+
+const upperRegister = (db) => {
+  const keys1 = document.querySelectorAll('.key');
+  Object.values(db).forEach(obj => {
+    keys1.forEach((key, index) => {
+      key.innerHTML = `${Object.values(obj)[index].en[2]}`;
+    });
+  });
+};
+
+const lowerRegister = (db) => {
+  const keys1 = document.querySelectorAll('.key');
+  Object.values(db).forEach(obj => {
+    keys1.forEach((key, index) => {
+      key.innerHTML = `${Object.values(obj)[index].en[0]}`;
+    });
+  });
+};
+
+const caps = document.getElementById('CapsLock');
+caps.addEventListener('mousedown', upperRegister(keyCodes));

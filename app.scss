@@ -7,15 +7,16 @@
 
 html,
 body {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    background: #d0e0e3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #0e84b7;
     width: 100%;
     height: 100vh;
     color: #000000;
-    font-family: Roboto, monospace;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
 }
 
 .wrapper {
@@ -28,13 +29,11 @@ body {
 }
 
 textarea {
-    flex: 1;
     margin: 25px auto;
     background: transparent;
-    color: #777777;
-    min-height: 140px;
+    color: #F5DF4D;
+    min-height: 240px;
     min-width: 790px;
-    width: 790px;
     font-size: 16px;
     padding: 15px;
     word-wrap: break-spaces;
@@ -42,6 +41,7 @@ textarea {
     font-family: monospace;
     align-items: center;
     justify-content: center;
+    resize: none;
 }
 .keyboard {
     display: flex;
@@ -53,18 +53,19 @@ textarea {
     text-align: center;
     min-width: 934px;
     width: 934px;
+
 }
 
 .key {
     font-size: 16px;
     box-shadow: 0 0 0 4px #000000;
-    outline: 4px solid #000000;
+    outline: 1px solid #000000;
     height: 50px;
     min-width: 50px;
     border: none;
     border-radius: 10px;
-    color: #000000;
-    background: transparent;
+    color: #0e84b7;
+    background: #B55A30;
     cursor: pointer;
     position: relative;
     z-index: 1;
@@ -78,4 +79,10 @@ textarea {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.active {
+    background-color: #F5DF4D;
+    border-radius: 50%;
+    color: #B55A30;
 }
