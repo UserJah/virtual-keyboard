@@ -1,4 +1,4 @@
-export default const keyCodes = { // KeyCode : {en: [NORMAL, SHIFT, CAPS] ru: [NORMAL, RIGHTSHIFT, CAPS]}
+const keyCodes = { // KeyCode : {en: [NORMAL, SHIFT, CAPS] ru: [NORMAL, RIGHTSHIFT, CAPS]}
   Backquote: {
     en: ['`', '~', '`'], ru: ['ё', 'Ё', 'Ё']
   },
@@ -39,10 +39,10 @@ export default const keyCodes = { // KeyCode : {en: [NORMAL, SHIFT, CAPS] ru: [N
     en: ['=', '+', '='], ru: ['=', '+', '=']
   },
   Backspace: {
-    en: ['', '', ''], ru: ['', '', '']
+    en: ['Backspace', 'Backspace', 'Backspace'], ru: ['Backspace', 'Backspace', 'Backspace']
   },
   Tab: {
-    en: ['    ', '    ', '    '], ru: ['    ', '    ', '    ']
+    en: ['Tab', 'Tab', 'Tab'], ru: ['Tab', 'Tab', 'Tab']
   },
   KeyQ: {
     en: ['q', 'Q', 'Q'], ru: ['й', 'Й', 'Й']
@@ -84,10 +84,10 @@ export default const keyCodes = { // KeyCode : {en: [NORMAL, SHIFT, CAPS] ru: [N
     en: ['&bsol;', '&bsol;', '&bsol;'], ru: ['&bsol;', '&bsol;', '&bsol;']
   },
   Delete: {
-    en: ['', '', ''], ru: ['', '', '']
+    en: ['Delete', 'Delete', 'Delete'], ru: ['Delete', 'Delete', 'Delete']
   },
   CapsLock: {
-    en: ['', '', ''], ru: ['', '', '']
+    en: ['CapsLock', 'CapsLock', 'CapsLock'], ru: ['CapsLock', 'CapsLock', 'CapsLock']
   },
   KeyA: {
     en: ['a', 'A', 'A'], ru: ['ф', 'Ф', 'Ф']
@@ -123,10 +123,10 @@ export default const keyCodes = { // KeyCode : {en: [NORMAL, SHIFT, CAPS] ru: [N
     en: ['&apos;', '&quot;', '&apos;'], ru: ['э', 'Э', 'Э']
   },
   Enter: {
-    en: ['\r\n', '\r\n', '\r\n'], ru: ['\r\n', '\r\n', '\r\n']
+    en: ['Enter', 'Enter', 'Enter'], ru: ['Enter', 'Enter', 'Enter']
   },
   ShiftLeft: {
-    en: ['', '', ''], ru: ['', '', '']
+    en: ['Shift', 'Shift', 'Shift'], ru: ['Shift', 'Shift', 'Shift']
   },
   KeyZ: {
     en: ['z', 'Z', 'Z'], ru: ['я', 'Я', 'Я']
@@ -159,36 +159,37 @@ export default const keyCodes = { // KeyCode : {en: [NORMAL, SHIFT, CAPS] ru: [N
     en: ['/', '?', '/'], ru: ['.', ',', '.']
   },
   ArrowUp: {
-    en: ['&uarr', '&uarr', '&uarr'], ru: ['&uarr', '&uarr', '&uarr']
+    en: ['&#8593;', '&#8593;', '&#8593;'], ru: ['&#8593;', '&#8593;', '&#8593;']
   },
   ShiftRight: {
-    en: ['', '', ''], ru: ['', '', '']
+    en: ['Shift', 'Shift', 'Shift'], ru: ['Shift', 'Shift', 'Shift']
   },
   ControlLeft: {
-    en: ['', '', ''], ru: ['', '', '']
+    en: ['Ctrl', 'Ctrl', 'Ctrl'], ru: ['Ctrl', 'Ctrl', 'Ctrl']
   },
   MetaLeft: {
-    en: ['', '', ''], ru: ['', '', '']
+    en: ['Win', 'Win', 'Win'], ru: ['Win', 'Win', 'Win']
   },
   AltLeft: {
-    en: ['', '', ''], ru: ['', '', '']
+    en: ['Alt', 'Alt', 'Alt'], ru: ['Alt', 'Alt', 'Alt']
   },
   Space: {
-    en: [' ', ' ', ' '], ru: [' ', ' ', ' ']
+    en: ['Space', 'Space', 'Space'], ru: ['Space', 'Space', 'Space']
   },
   AltRight: {
-    en: ['', '', ''], ru: ['', '', '']
+    en: ['Alt', 'Alt', 'Alt'], ru: ['Alt', 'Alt', 'Alt']
   },
   ArrowLeft: {
-    en: ['&larr', '&larr', '&larr'], ru: ['&larr', '&larr', '&larr']
+    en: ['&#8592;', '&#8592;', '&#8592;'], ru: ['&#8592;', '&#8592;', '&#8592;']
   },
   ArrowDown: {
-    en: ['&darr', '&darr', '&darr'], ru: ['&darr', '&darr', '&darr']
+    en: ['&#8595;', '&#8595;', '&#8595;'], ru: ['&#8595;', '&#8595;', '&#8595;']
   },
   ArrowRight: {
-    en: ['&rarr', '&rarr', '&rarr'], ru: ['&rarr', '&rarr', '&rarr']
+    en: ['&#8594;', '&#8594;', '&#8594;'], ru: ['&#8594;', '&#8594;', '&#8594;']
   },
   ControlRight: {
-    en: ['', '', ''], ru: ['', '', '']
+    en: ['Ctrl', 'Ctrl', 'Ctrl'], ru: ['Ctrl', 'Ctrl', 'Ctrl']
   }
 };
+export default { keyCodes };
