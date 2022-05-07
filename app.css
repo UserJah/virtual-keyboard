@@ -50,6 +50,7 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
   resize: none;
+  overflow-x: hidden;
 }
 
 .keyboard {

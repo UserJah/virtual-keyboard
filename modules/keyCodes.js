@@ -155,7 +155,7 @@ const keyCodes = { // KeyCode : {en: [NORMAL, SHIFT, CAPS] ru: [NORMAL, RIGHTSHI
   Period: {
     en: ['.', '>', '.'], ru: ['ю', 'Ю', 'Ю']
   },
-  Shash: {
+  Slash: {
     en: ['/', '?', '/'], ru: ['.', ',', '.']
   },
   ArrowUp: {

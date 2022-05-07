@@ -5,6 +5,7 @@ export default class Keyboard {
     this.wrapper = document.createElement('div');
     this.textareaDiv = document.createElement('div');
     this.textarea = document.createElement('textarea');
+    this.textarea.setAttribute('cols', '10');
     this.keyboard = document.createElement('div');
     this.wrapper.classList.add('wrapper');
     this.textareaDiv.classList.add('textarea');
@@ -48,15 +49,6 @@ export default class Keyboard {
         key.node.innerHTML = `${Object.values(obj)[i].en[0]}`;
         this.rows[4].appendChild(key.node);
       }
-    });
-  }
-
-  upperRegister (db) {
-    const keys1 = document.querySelectorAll('.key');
-    Object.values(db).forEach(obj => {
-      keys1.forEach((key, index) => {
-        key.innerHTML = `${Object.values(obj)[index].en[2]}`;
-      });
     });
   }
 }
