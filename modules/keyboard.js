@@ -1,4 +1,4 @@
-import Key from './key';
+import Key from './key.js';
 
 export default class Keyboard {
   constructor() {
