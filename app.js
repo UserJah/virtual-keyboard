@@ -8,6 +8,11 @@ csslink.type = 'text/css';
 csslink.href = './app.css';
 head.appendChild(csslink);
 
+const faviconlink = document.createElement('link');
+faviconlink.rel = 'icon';
+faviconlink.href = './assets/rsicon.ico';
+head.appendChild(faviconlink);
+
 const keyboard = new Keyboard();
 keyboard.createKeys(keyCodes);
 

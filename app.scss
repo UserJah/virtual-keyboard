@@ -37,22 +37,22 @@ p {
 }
 
 textarea {
-    margin: 22px auto;
+    margin: 18px auto;
     background: transparent;
     color: #F5DF4D;
     min-height: 240px;
-    min-width: 790px;
-    font-size: 16px;
+    min-width: 875px;
+    font-size: 20px;
     padding: 15px;
     word-wrap: break-spaces;
     white-space: pre;
     font-family: Russo One;
-    font-size: 30px;
     align-items: center;
     justify-content: center;
     resize: none;
     overflow-x: hidden;
     border-radius: 3%;
+    letter-spacing: 0.08em;
     &::placeholder {
         text-align: center;
         font-size: 22px;
