@@ -191,6 +191,29 @@ const win = document.getElementById('MetaLeft');
 win.addEventListener('click', () => {
   changeLang(keyCodes);
 });
-document.addEventListener('keydown', e => {
-  console.log(e.code);
-});
+
+function runOnKeys(func, ...codes) {
+  let pressed = new Set();
+  document.addEventListener('keydown', (e) => {
+    pressed.add(e.code);
+
+    for (let i = 0; i < codes.length; i += 1) { // все ли клавиши из набора нажаты?
+      if (!pressed.has(codes[i])) {
+        return;
+      }
+    }
+    pressed.clear();
+
+    func();
+  });
+
+  document.addEventListener('keyup', e => {
+    pressed.delete(e.code);
+  });
+}
+
+runOnKeys(
+  () => changeLang(keyCodes),
+  'ShiftLeft',
+  'AltLeft'
+);
