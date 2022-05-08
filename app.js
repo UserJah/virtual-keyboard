@@ -1,5 +1,5 @@
 import keyCodes from './modules/keyCodes.js';
-import Keyboard from './modules/Keyboard.js';
+import Keyboard from './modules/keyboard.js';
 
 const head = document.getElementsByTagName('HEAD')[0];
 const csslink = document.createElement('link');
