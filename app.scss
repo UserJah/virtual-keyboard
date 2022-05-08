@@ -4,24 +4,26 @@
 //     margin: 0;
 //     padding: 0;
 // }
-
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 html,
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #0e84b7;
+    background: #4c4f5f;
     width: 100%;
     height: 100vh;
     color: #000000;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Russo One;
     font-size: 30px;
 }
 
 .wrapper {
     margin: 0 auto;
     max-width: 1280px;
+    background-color: #284e58;
+    border-radius: 5%
 }
 
 .textarea {
@@ -43,6 +45,11 @@ textarea {
     justify-content: center;
     resize: none;
     overflow-x: hidden;
+    border-radius: 5%;
+    &::placeholder {
+        text-align: center;
+        font-size: 45px;
+    }
 }
 .keyboard {
     display: flex;
@@ -52,13 +59,12 @@ textarea {
     border-radius: 10px;
     position: relative;
     text-align: center;
-    min-width: 934px;
-    width: 934px;
-
+    min-width: 888px;
+    padding: 20px;
 }
 
 .key {
-    font-size: 16px;
+    font-size: 22px;
     box-shadow: 0 0 0 4px #000000;
     outline: 1px solid #000000;
     height: 50px;
@@ -66,7 +72,7 @@ textarea {
     border: none;
     border-radius: 10px;
     color: #0e84b7;
-    background: #B55A30;
+    background: #4c4f5f;
     cursor: pointer;
     position: relative;
     z-index: 1;
@@ -86,4 +92,22 @@ textarea {
     background-color: #F5DF4D;
     border-radius: 50%;
     color: #B55A30;
+}
+
+#Space {
+    width: 44%;
+}
+#Backspace {
+    width: 25%;
+}
+#Tab, #Delete {
+    width: 20%;
+}
+
+#CapsLock, #Enter {
+    width: 30%;
+}
+
+#ShiftLeft, #ShiftRight {
+    width: 30%;
 }

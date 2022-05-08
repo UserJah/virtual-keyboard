@@ -5,7 +5,7 @@ export default class Keyboard {
     this.wrapper = document.createElement('div');
     this.textareaDiv = document.createElement('div');
     this.textarea = document.createElement('textarea');
-    this.textarea.setAttribute('cols', '10');
+    this.textarea.setAttribute('placeholder', 'FOR START PRESS HERE');
     this.keyboard = document.createElement('div');
     this.wrapper.classList.add('wrapper');
     this.textareaDiv.classList.add('textarea');
