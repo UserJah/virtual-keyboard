@@ -1,1 +1,4 @@
 node_modules/
+app.css.map
+app.scss
+package-lock.json
