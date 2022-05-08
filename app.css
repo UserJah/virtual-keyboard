@@ -22,11 +22,17 @@ body {
   font-size: 30px;
 }
 
+p {
+  text-align: center;
+  font-size: 15px;
+  color: #767676;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 1280px;
   background-color: #284e58;
-  border-radius: 5%;
+  border-radius: 3%;
 }
 
 .textarea {
@@ -36,7 +42,7 @@ body {
 }
 
 textarea {
-  margin: 25px auto;
+  margin: 22px auto;
   background: transparent;
   color: #F5DF4D;
   min-height: 240px;
@@ -45,7 +51,8 @@ textarea {
   padding: 15px;
   word-wrap: break-spaces;
   white-space: pre;
-  font-family: monospace;
+  font-family: Russo One;
+  font-size: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -54,27 +61,27 @@ textarea {
           justify-content: center;
   resize: none;
   overflow-x: hidden;
-  border-radius: 5%;
+  border-radius: 3%;
 }
 
 textarea::-webkit-input-placeholder {
   text-align: center;
-  font-size: 45px;
+  font-size: 22px;
 }
 
 textarea:-ms-input-placeholder {
   text-align: center;
-  font-size: 45px;
+  font-size: 22px;
 }
 
 textarea::-ms-input-placeholder {
   text-align: center;
-  font-size: 45px;
+  font-size: 22px;
 }
 
 textarea::placeholder {
   text-align: center;
-  font-size: 45px;
+  font-size: 22px;
 }
 
 .keyboard {
@@ -100,6 +107,7 @@ textarea::placeholder {
 
 .key {
   font-size: 22px;
+  font-family: Russo One;
   -webkit-box-shadow: 0 0 0 4px #000000;
           box-shadow: 0 0 0 4px #000000;
   outline: 1px solid #000000;
@@ -114,6 +122,7 @@ textarea::placeholder {
   z-index: 1;
   margin: 3px;
   overflow: visible;
+  margin: 5px;
 }
 
 .row {
@@ -133,9 +142,11 @@ textarea::placeholder {
 }
 
 .active {
-  background-color: #F5DF4D;
-  border-radius: 50%;
-  color: #B55A30;
+  top: 5px;
+  background-color: #0e84b7;
+  color: #4c4f5f;
+  -webkit-box-shadow: inset 0 2px 0 #000, inset 0 -3px 0 #0e84b7;
+  box-shadow: inset 0 2px 0 #000, inset 0 -3px 0 #0e84b7;
 }
 
 #Space {
@@ -148,6 +159,10 @@ textarea::placeholder {
 
 #Tab, #Delete {
   width: 20%;
+}
+
+#Delete {
+  font-size: 15px;
 }
 
 #CapsLock, #Enter {

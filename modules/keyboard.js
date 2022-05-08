@@ -7,11 +7,17 @@ export default class Keyboard {
     this.textarea = document.createElement('textarea');
     this.textarea.setAttribute('placeholder', 'FOR START PRESS HERE');
     this.keyboard = document.createElement('div');
+    this.OSINFO = document.createElement('p');
+    this.OSINFO.textContent = 'KEYBOARD FOR WINDOWS';
+    this.CHANGELANGINFO = document.createElement('p');
+    this.CHANGELANGINFO.textContent = 'FOR CHANGE EN/RU PRESS LSHIFT + LALT ON REAL KEYBOARD OR WIN ON VIRTUAL KEYBOARD';
     this.wrapper.classList.add('wrapper');
     this.textareaDiv.classList.add('textarea');
     this.keyboard.classList.add('keyboard');
     this.wrapper.appendChild(this.textareaDiv);
     this.wrapper.appendChild(this.keyboard);
+    this.wrapper.appendChild(this.OSINFO);
+    this.wrapper.appendChild(this.CHANGELANGINFO);
     this.textareaDiv.appendChild(this.textarea);
     document.body.appendChild(this.wrapper);
     for (let i = 0; i < 5; i += 1) {

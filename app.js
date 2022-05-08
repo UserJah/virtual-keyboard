@@ -51,29 +51,28 @@ document.addEventListener('keyup', e => {
 });
 
 const changeRegister = (db) => {
-  console.log(keys[15].textContent === 'q');
   if (keys[15].textContent === 'q') {
     Object.values(db).forEach(obj => {
       keys.forEach((key, index) => {
-        key.innerHTML = `${Object.values(obj)[index].en[2]}`;
+        keys[index].innerHTML = `${Object.values(obj)[index].en[2]}`;
       });
     });
   } else if (keys[15].textContent === 'Q') {
     Object.values(db).forEach(obj => {
       keys.forEach((key, index) => {
-        key.innerHTML = `${Object.values(obj)[index].en[0]}`;
+        keys[index].innerHTML = `${Object.values(obj)[index].en[0]}`;
       });
     });
   } else if (keys[15].textContent === 'й') {
     Object.values(db).forEach(obj => {
       keys.forEach((key, index) => {
-        key.innerHTML = `${Object.values(obj)[index].ru[2]}`;
+        keys[index].innerHTML = `${Object.values(obj)[index].ru[2]}`;
       });
     });
   } else if (keys[15].textContent === 'Й') {
     Object.values(db).forEach(obj => {
       keys.forEach((key, index) => {
-        key.innerHTML = `${Object.values(obj)[index].ru[0]}`;
+        keys[index].innerHTML = `${Object.values(obj)[index].ru[0]}`;
       });
     });
   }
@@ -82,25 +81,25 @@ const changeRegisterShift = (db) => {
   if (keys[15].textContent === 'q') {
     Object.values(db).forEach(obj => {
       keys.forEach((key, index) => {
-        key.innerHTML = `${Object.values(obj)[index].en[1]}`;
+        keys[index].innerHTML = `${Object.values(obj)[index].en[1]}`;
       });
     });
   } else if (keys[15].textContent === 'Q') {
     Object.values(db).forEach(obj => {
       keys.forEach((key, index) => {
-        key.innerHTML = `${Object.values(obj)[index].en[0]}`;
+        keys[index].innerHTML = `${Object.values(obj)[index].en[0]}`;
       });
     });
   } else if (keys[15].textContent === 'й') {
     Object.values(db).forEach(obj => {
       keys.forEach((key, index) => {
-        key.innerHTML = `${Object.values(obj)[index].ru[1]}`;
+        keys[index].innerHTML = `${Object.values(obj)[index].ru[1]}`;
       });
     });
   } else if (keys[15].textContent === 'Й') {
     Object.values(db).forEach(obj => {
       keys.forEach((key, index) => {
-        key.innerHTML = `${Object.values(obj)[index].ru[0]}`;
+        keys[index].innerHTML = `${Object.values(obj)[index].ru[0]}`;
       });
     });
   }
@@ -163,25 +162,25 @@ const changeLang = (db) => {
   if (keys[15].textContent === 'q') {
     Object.values(db).forEach(obj => {
       keys.forEach((key, index) => {
-        key.innerHTML = `${Object.values(obj)[index].ru[0]}`;
+        keys[index].innerHTML = `${Object.values(obj)[index].ru[0]}`;
       });
     });
   } else if (keys[15].textContent === 'Q') {
     Object.values(db).forEach(obj => {
       keys.forEach((key, index) => {
-        key.innerHTML = `${Object.values(obj)[index].ru[2]}`;
+        keys[index].innerHTML = `${Object.values(obj)[index].ru[2]}`;
       });
     });
   } else if (keys[15].textContent === 'й') {
     Object.values(db).forEach(obj => {
       keys.forEach((key, index) => {
-        key.innerHTML = `${Object.values(obj)[index].en[0]}`;
+        keys[index].innerHTML = `${Object.values(obj)[index].en[0]}`;
       });
     });
   } else if (keys[15].textContent === 'Й') {
     Object.values(db).forEach(obj => {
       keys.forEach((key, index) => {
-        key.innerHTML = `${Object.values(obj)[index].en[2]}`;
+        keys[index].innerHTML = `${Object.values(obj)[index].en[2]}`;
       });
     });
   }
