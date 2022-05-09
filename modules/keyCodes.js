@@ -84,7 +84,7 @@ const keyCodes = { // KeyCode : {en: [NORMAL, SHIFT, CAPS] ru: [NORMAL, RIGHTSHI
     en: ['&bsol;', '&bsol;', '&bsol;'], ru: ['&bsol;', '&bsol;', '&bsol;']
   },
   Delete: {
-    en: ['Delete', 'Delete', 'Delete'], ru: ['Delete', 'Delete', 'Delete']
+    en: ['GitHub', 'GitHub', 'GitHub'], ru: ['GitHub', 'GitHub', 'GitHub']
   },
   CapsLock: {
     en: ['CapsLock', 'CapsLock', 'CapsLock'], ru: ['CapsLock', 'CapsLock', 'CapsLock']

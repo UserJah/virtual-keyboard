@@ -232,4 +232,9 @@ document.addEventListener('keydown', e => {
   if (e.code === 'AltLeft' || e.code === 'AltRight') {
     e.preventDefault();
   }
-})
+});
+
+const gitHub = document.getElementById('Delete');
+gitHub.addEventListener('click', () => {
+  window.open('https://github.com/UserJah', '_blank');
+});
