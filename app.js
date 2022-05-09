@@ -115,20 +115,26 @@ caps.addEventListener('mousedown', () => changeRegister(keyCodes));
 
 document.addEventListener('keydown', e => {
   if (e.code === 'CapsLock') {
+    if (e.repeat) {
+      return;
+    }
     changeRegister(keyCodes);
   }
 });
 
 const shiftLeft = document.getElementById('ShiftLeft');
-const ShiftRight = document.getElementById('ShiftRight');
+const shiftRight = document.getElementById('ShiftRight');
 
 shiftLeft.addEventListener('mousedown', () => changeRegisterShift(keyCodes));
 shiftLeft.addEventListener('mouseup', () => changeRegisterShift(keyCodes));
-ShiftRight.addEventListener('mousedown', () => changeRegisterShift(keyCodes));
-ShiftRight.addEventListener('mouseup', () => changeRegisterShift(keyCodes));
+shiftRight.addEventListener('mousedown', () => changeRegisterShift(keyCodes));
+shiftRight.addEventListener('mouseup', () => changeRegisterShift(keyCodes));
 
 document.addEventListener('keydown', e => {
-  if (e.code === 'ShiftLeft' || e.code === 'ShiftRigth') {
+  if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
+    if (e.repeat) {
+      return;
+    }
     changeRegisterShift(keyCodes);
   }
 });
@@ -221,3 +227,9 @@ runOnKeys(
   'ShiftLeft',
   'AltLeft'
 );
+
+document.addEventListener('keydown', e => {
+  if (e.code === 'AltLeft' || e.code === 'AltRight') {
+    e.preventDefault();
+  }
+})
